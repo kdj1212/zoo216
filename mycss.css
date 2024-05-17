@@ -2,6 +2,24 @@ body {
     margin: 0px;
 }
 
+div {
+    left: 500px;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: 2s box;
+    animation-iteration-count: 10;
+}
+
+@keyframes box {
+    0% {background-color: red; left: 500px; top: 0px;}
+    25% {background-color: red; left: 600px; top: 0px;}
+    50% {background-color: rgb(255, 111, 111); left: 700px; top: 0px;}
+    75% {background-color: rgb(255, 0, 0); left: 600px; top: 0px;}
+    100% {background-color: red; left: 500px; top: 0px;}
+}
+
 header {
     margin: 0px;
     text-align: center;
@@ -21,9 +39,8 @@ nav {
 
 
 section#main {
-    float: right;
     width: 70%;
-    height: 200px;
+    height: 400px;
 }
 
 footer {
@@ -40,6 +57,32 @@ figcaption {
 }
 
 article img {
-    float: left;
     padding-right: 5px;
 }
+
+
+@keyframes test {
+    0% {background-color: red; left: 0px; top: 0px;}
+    25% {background-color: red; left: 100px; top: 0px;}
+}
+
+img#rabbit {
+    display: block;
+    position: relative;
+    margin: 10px;
+    animation: ani 5s infinite;
+    animation-timing-function: ease-out;
+}
+
+img#turtle {
+    display: block;
+    position: relative;
+    margin: 10px;
+    animation: ani 5s infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes ani {
+    from {left: 0px;}
+    to { left: 500px;}
+}
+

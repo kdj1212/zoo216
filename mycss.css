@@ -1,106 +1,107 @@
-body {
-    margin: 0px;
+* {
+    box-sizing: border-box;
+}
+
+#page {
+    padding: 5px;
+    margin: 20px auto;
+    width: 94%;
+}
+
+#header {
+    color: white;
+    background-color: rgb(21, 50, 65);
+    text-align: center;
+}
+
+#sidebar {
+    float: left;
+    width: 25%;
+}
+
+#main {
+    float: right;
+    width: 75%;
+}
+
+#footer {
+    border-top: 1px solid rgb(27, 27, 27);
+    clear: both;
 }
 
 #redbox {
-    left: 500px;
-    background-color: red;
     width: 100px;
     height: 100px;
+    background: rgb(255, 201, 201);
     position: relative;
-    animation: 2s box;
+    animation: 2s redbox;
     animation-iteration-count: 10;
 }
 
-@keyframes box {
-    0% {background-color: red; left: 0px; top: 0px;}
-    25% {background-color: red; left: 100px; top: 0px;}
-    50% {background-color: rgb(255, 111, 111); left: 200px; top: 0px;}
-    75% {background-color: rgb(255, 0, 0); left: 100px; top: 0px;}
-    100% {background-color: red; left: 0px; top: 0px;}
+@keyframes redbox {
+    0% {
+        background-color: rgb(255, 201, 201);
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: rgb(255, 201, 201);
+        left: 100px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: rgb(255, 135, 135);
+        left: 200px;
+        top: 0px;
+    }
+
+    75% {
+        background-color: rgb(255, 201, 201);
+        left: 100px;
+        top: 0px;
+    }
+
+    100% {
+        background-color: rgb(255, 201, 201);
+        left: 0px;
+        top: 0px;
+    }
 }
 
-header {
-    margin: 0px;
-    text-align: center;
-    padding: 3px;
-    background-color: rgb(25, 26, 26);
-    color: white;
-}
-
-h2 {
-    margin: 0px;
-}
-
-nav {
-    float: left;
-    width: 30%;
-}
-
-
-section#main {
-    width: 100%;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    margin: 0px;
-    font-size: 90%;
-    clear: both;
-    border-top: 1px solid rgb(152, 151, 151);
-}
-
-figcaption {
-    padding: 10px 0px;
-}
-
-article img {
-    padding-right: 5px;
-}
-
-
-@keyframes test {
-    0% {background-color: red; left: 0px; top: 0px;}
-    25% {background-color: red; left: 100px; top: 0px;}
-}
-
-img#rabbit {
+#rabbit,
+#turtle {
     display: block;
     position: relative;
     margin: 10px;
-    animation: ani 5s infinite;
+    animation: run 5s infinite;
+}
+
+#rabbit {
     animation-timing-function: ease-out;
 }
 
-img#turtle {
-    display: block;
-    position: relative;
-    margin: 10px;
-    animation: ani 5s infinite;
+#turtle {
     animation-timing-function: ease-in;
 }
-@keyframes ani {
-    from {left: 0px;}
-    to { left: 500px;}
-}
 
-figure {
-    margin: 0;
+@keyframes run {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 500px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    header {
-        width: 100%;
-    }
 
-    nav {
-        width: 100%;
-    }
-
-    section {
+    #header,
+    #sidebar,
+    #main {
         width: 100%;
     }
 
 }
-
